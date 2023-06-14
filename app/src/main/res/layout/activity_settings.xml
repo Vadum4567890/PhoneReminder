@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_row_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/viewbutton_ble"
+            app:layout_constraintLeft_toLeftOf="@id/viewbutton_ble"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewbutton_ble">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="0.1dp"
+                android:gravity="center"
+                android:text="@string/bluetooth_settings"
+                android:textColor="@color/black"
+                android:background="@color/greytwo"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/spinner_ble_settings"
+                app:layout_constraintLeft_toLeftOf="@id/spinner_ble_settings"
+                app:layout_constraintRight_toRightOf="@id/spinner_ble_settings"
+                app:layout_constraintTop_toTopOf="@id/spinner_ble_settings" />
+
+            <Spinner
+                android:id="@+id/spinner_ble_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/right_semicircle_small"
+                android:backgroundTint="@color/greytwo"
+                android:gravity="center"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewbutton_ble"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/right_semicircle_button"
+            android:drawableEnd="@drawable/baseline_bluetooth_24"
+            android:elevation="20dp"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_row_one"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/viewbutton_ring"
+            app:layout_constraintLeft_toLeftOf="@id/viewbutton_ring"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewbutton_ring"
+            >
+
+
+        <TextView
+            android:id="@+id/ringtone_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="0.1dp"
+            android:gravity="center"
+            android:text="@string/ringtone_settings"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:background="@color/greytwo"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_ringtone"
+            app:layout_constraintLeft_toLeftOf="@id/spinner_ringtone"
+            app:layout_constraintRight_toRightOf="@id/spinner_ringtone"
+            app:layout_constraintTop_toTopOf="@id/spinner_ringtone" />
+
+        <Spinner
+            android:id="@+id/spinner_ringtone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/right_semicircle_small"
+            android:backgroundTint="@color/greytwo"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewbutton_ring"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/right_semicircle_button"
+            android:drawableEnd="@drawable/baseline_speaker_phone_24"
+            android:elevation="20dp"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
