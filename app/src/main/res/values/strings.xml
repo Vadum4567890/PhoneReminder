@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Phone Reminder</string>
+    <string name="bluetooth_settings">Bluetooth Settings</string>
+    <string name="ringtone_settings">Ringtone Settings</string>
+</resources>
